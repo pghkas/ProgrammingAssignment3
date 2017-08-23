@@ -26,3 +26,24 @@ Uses descriptive activity names to name the activities in the data set
 Appropriately labels the data set with descriptive variable names.
 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 Good luck!
+
+Steps of solution
+
+1.	Set Library plyr
+2.	Read X_train.txt, Y_train.txt and subject_train.txt
+3.	Read X_text.txt, Y_text.txt and subject_test.txt
+4.	Bind X_train.txt and X_test.txt
+5.	Bind Y_train.txt and Y_test.txt
+6.	Bind subject_train.txt and subject_test.txt
+7.	Read features.txt
+8.	mean() an std() col name filter
+9.	Read activity_labels.txt
+10.	Column names assignment
+a.	names(ydata) <- "activity"
+b.	names(xdata) <- features[mean_and_std, 2]
+c.	names(subjectdata) <- "subject"
+11.	binding of all data
+12.	Average calculation.Total 68 column excluding last 2 activity and subject
+13.	output Average table
+14.	write.table(avg_data, "avg_data.txt", row.name=FALSE)
+
